@@ -12,12 +12,18 @@ sont une mise en forme pour une coloration syntaxique de l'extension "Better Com
 import random
 
 #! Fonctions
-def lancers(nombre_de_lancers=8): #todo# parametre nombre_de_lancers: Nombre de lancers de dés à simuler.
+
+#todo# parametre nombre_de_lancers: Nombre de lancers de dés à simuler.
+def lancers(nombre_de_lancers=8):
     """Simule 8 lancers de dés."""
+
+    # liste principale qui a les résultats des lancers de dés.
     liste = []
+    
     for i in range(nombre_de_lancers):
         # Utilisation de random.randint(1, 6) pour avoir un nombre aléatoire entre 1 et 6 et le mettre dans une liste.
         liste.append(random.randint(1, 6))
+
     return liste
 
 #? Test de la fonction lancers()
@@ -53,7 +59,8 @@ def tour():
 score_cam = 0
 score_hug = 0
 running = True
-
+compteur_tour_cam = 0
+compteur_tour_hug = 0
 
 #! Boucle principale
 while running:
@@ -67,7 +74,7 @@ while running:
 
     print("Lancers de Camille :", lancer)
     print("Camille a", str(score_cam) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
-
+    compteur_tour_cam += 1
 
     if score_cam == 4:
         running = False
@@ -82,11 +89,27 @@ while running:
         print("Lancers de Hugo :", lancer)
         print("Hugo a", str(score_hug) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
 
+        compteur_tour_hug += 1
+
         if score_hug == 4:
             running = False
+    
 
 #? Annonce du gagnant
 if score_cam == 4:
     print("Camille a gagné !")
+    gagnant = "Camille"
 else :
     print("Hugo a gagné")
+    gagnant = "Hugo"
+
+#! Récapitulatif mis en forme pour avoir un affichage plus clair et lisible
+# Rapel: ":<37" = aligner à gauche pour un total de 37 caractères
+# "<" gauche, ">" droite, "^" centre
+# doc sur https://docs.python.org/fr/3/library/string.html
+print("-" * 50)
+print(f"| {"Nombre de tours pour Camille :":<37} {compteur_tour_cam:>8} |")
+print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
+print(f"| {"Gagnant :":<37} {gagnant:>8} |")
+print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*6:>8} |")
+print("-" * 50)
