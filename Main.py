@@ -31,7 +31,7 @@ def tour():
     """Simule un tour de jeu pour un joueur."""
     score = 0
     lancer = lancers()
-    print(lancer)
+    #print(lancer)
     nb_de_5 = 0
     for i in lancer:
         if i == 5:
@@ -44,8 +44,11 @@ def tour():
         score += 0
     elif nb_de_5 >= 2:
         score += 1
+    
 
-    return score
+    return score, nb_de_5, lancer
+
+ 
 
 
 #! Initiation des valeurs
@@ -56,17 +59,21 @@ running = True
 
 #! Boucle principale
 while running:
-
     print("Tour de Camille :")
-    score_cam += tour()
-    print("Score de Camille :", score_cam)
+    addscore, nb_de_5, lancer = tour()
+    score_cam += addscore
+    print("Lancers de Camille :", lancer)
+    print("Camille a", str(score_cam) + ", et son nombre de 5 à ce tour est", nb_de_5)
+
 
     if score_cam == 4:
         running = False
     else:
         print("Tour de Hugo :")
-        score_hug += tour()
-        print("Score de Hugo :", score_hug)
+        addscore, nb_de_5, lancer = tour()
+        score_hug += addscore
+        print("Lancers de Hugo :", lancer)
+        print("Hugo a", str(score_hug) + ", et son nombre de 5 à ce tour est", nb_de_5)
 
         if score_hug == 4:
             running = False
