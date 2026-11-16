@@ -73,7 +73,7 @@ while running:
     score_cam += addscore
 
     print("Lancers de Camille :", lancer)
-    print("Camille a", str(score_cam) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
+    print("Camille est maintenant à", score_cam, "point(s), et son nombre de 5 à ce tour est", nb_de_5, "\n")
     compteur_tour_cam += 1
 
     if score_cam == 4:
@@ -87,7 +87,7 @@ while running:
         score_hug += addscore
 
         print("Lancers de Hugo :", lancer)
-        print("Hugo a", str(score_hug) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
+        print("Hugo est maintenant à", score_hug, "point(s), et son nombre de 5 à ce tour est", nb_de_5, "\n")
 
         compteur_tour_hug += 1
 
@@ -107,9 +107,9 @@ else :
 # Rapel: ":<37" = aligner à gauche pour un total de 37 caractères
 # "<" gauche, ">" droite, "^" centre
 # doc sur https://docs.python.org/fr/3/library/string.html
-print("-" * 50)
+print("_" * 50) # Underscore
 print(f"| {"Nombre de tours pour Camille :":<37} {compteur_tour_cam:>8} |")
 print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
 print(f"| {"Gagnant :":<37} {gagnant:>8} |")
 print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*6:>8} |")
-print("-" * 50)
+print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
