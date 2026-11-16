@@ -36,20 +36,21 @@ def tour():
     score = 0
     lancer = lancers()
     nb_de_5 = 0
-
+    # On parcours la liste pour compter le nombre de 5
     for i in lancer:
         if i == 5:
             nb_de_5 += 1
         else:
             nb_de_5 += 0
-
+    # On utilise le nombre de 5 pour le mettre en score suivant les règles:
+    # un seul 5 -> +0 pts, plus ou égal a 2 -> +1 pts, zéro 5 -> -1 pts
     if nb_de_5 == 0:
         score -= 1
     elif nb_de_5 == 1:
         score += 0
     elif nb_de_5 >= 2:
         score += 1
-    
+    # Retourne sous forme de tuple les résultats
     return score, nb_de_5, lancer
 
  
@@ -58,9 +59,12 @@ def tour():
 #! Initiation des valeurs
 score_cam = 0
 score_hug = 0
-running = True
+
 compteur_tour_cam = 0
 compteur_tour_hug = 0
+
+running = True
+
 
 #! Boucle principale
 while running:
@@ -107,6 +111,7 @@ else :
 # Rapel: ":<37" = aligner à gauche pour un total de 37 caractères
 # "<" gauche, ">" droite, "^" centre
 # doc sur https://docs.python.org/fr/3/library/string.html
+
 print("_" * 50) # Underscore
 print(f"| {"Nombre de tours pour Camille :":<37} {compteur_tour_cam:>8} |")
 print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
