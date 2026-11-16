@@ -23,21 +23,20 @@ def lancers(nombre_de_lancers=8): #todo# parametre nombre_de_lancers: Nombre de 
 #? Test de la fonction lancers()
 assert len(lancers(32)) == 32, "lancers(32) doit retourner une liste de 32 nombres."
 
-def lancer_joli():
-    """Réécrit un lancer de dé mais avec une belle mise en forme."""
-    lancers()
 
 def tour():
     """Simule un tour de jeu pour un joueur."""
+
     score = 0
     lancer = lancers()
-    #print(lancer)
     nb_de_5 = 0
+
     for i in lancer:
         if i == 5:
             nb_de_5 += 1
         else:
             nb_de_5 += 0
+
     if nb_de_5 == 0:
         score -= 1
     elif nb_de_5 == 1:
@@ -45,7 +44,6 @@ def tour():
     elif nb_de_5 >= 2:
         score += 1
     
-
     return score, nb_de_5, lancer
 
  
@@ -59,25 +57,35 @@ running = True
 
 #! Boucle principale
 while running:
+
     print("Tour de Camille :")
+
+    # On récupère le score, le nombre de 5 et le lancer qu'a fait Camille
     addscore, nb_de_5, lancer = tour()
+
     score_cam += addscore
+
     print("Lancers de Camille :", lancer)
-    print("Camille a", str(score_cam) + ", et son nombre de 5 à ce tour est", nb_de_5)
+    print("Camille a", str(score_cam) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
 
 
     if score_cam == 4:
         running = False
     else:
+
         print("Tour de Hugo :")
+        # On récupère le score, le nombre de 5 et le lancer qu'a fait Hugo
         addscore, nb_de_5, lancer = tour()
+
         score_hug += addscore
+
         print("Lancers de Hugo :", lancer)
-        print("Hugo a", str(score_hug) + ", et son nombre de 5 à ce tour est", nb_de_5)
+        print("Hugo a", str(score_hug) + ", et son nombre de 5 à ce tour est", nb_de_5, "\n")
 
         if score_hug == 4:
             running = False
 
+#? Annonce du gagnant
 if score_cam == 4:
     print("Camille a gagné !")
 else :
