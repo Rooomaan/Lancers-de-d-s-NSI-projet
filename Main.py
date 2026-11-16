@@ -1,4 +1,6 @@
 """
+Retrouvez ce projet sur github - https://github.com/Rooomaan/Lancers-de-d-s-NSI-projet/blob/main/Main.py
+
 à savoir :
 - Les points d'exclamation (!)
 - Les points d'interrogation (?)
