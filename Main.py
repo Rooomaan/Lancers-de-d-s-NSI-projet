@@ -28,9 +28,6 @@ def lancers(nombre_de_lancers=8):
 
     return liste
 
-#? Test de la fonction lancers()
-assert len(lancers(32)) == 32, "lancers(32) doit retourner une liste de 32 nombres."
-
 
 def tour():
     """Simule un tour de jeu pour un joueur."""
@@ -55,7 +52,15 @@ def tour():
     # Retourne sous forme de tuple les résultats
     return score, nb_de_5, lancer
 
- 
+
+
+#! Asserts obligatoires
+
+#? Test de la fonction lancers()
+assert len(lancers(32)) == 32, "lancers(32) doit retourner une liste de 32 nombres."
+assert len(lancers(6)) == 6, "lancers(32) doit retourner une liste de 6 nombres."
+
+
 
 
 #! Initiation des valeurs
@@ -120,3 +125,5 @@ print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
 print(f"| {"Gagnant :":<37} {gagnant:>8} |")
 print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*6:>8} |")
 print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
+
+
