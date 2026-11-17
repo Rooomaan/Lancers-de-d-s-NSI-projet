@@ -107,7 +107,7 @@ while running:
             running = False
     
 
-#? Annonce du gagnant
+#? Annonce du gagnant et tableau de statistiques
 if score_cam == 4:
     print("Camille a gagné !")
     gagnant = "Camille"
