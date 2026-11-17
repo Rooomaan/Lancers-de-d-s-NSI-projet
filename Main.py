@@ -1,11 +1,11 @@
 """
 Retrouvez ce projet sur github - https://github.com/Rooomaan/Lancers-de-d-s-NSI-projet/blob/main/Main.py
 
-à savoir :
+À savoir :
 - Les points d'exclamation (!)
 - Les points d'interrogation (?)
 - Les "Todo"
-sont une mise en forme pour une coloration syntaxique de l'extension "Better Comments" sur VSCode pour une meilleure lecture.
+Sont une mise en forme pour une coloration syntaxique de l'extension "Better Comments" sur VSCode, pour une meilleure lisibilité.
 
 """
 
@@ -16,11 +16,11 @@ import random
 
 #! Fonctions
 
-#todo# parametre nombre_de_lancers: Nombre de lancers de dés à simuler.
+#todo# Paramètre nombre_de_lancers: Nombre de lancers de dés à simuler.
 def lancers(nombre_de_lancers=8):
     """Simule 8 lancers de dés."""
 
-    # liste principale qui a les résultats des lancers de dés.
+    # Liste principale qui a les résultats des lancers de dés.
     liste = []
     
     for i in range(nombre_de_lancers):
@@ -43,7 +43,7 @@ def tour():
         else:
             nb_de_5 += 0
     # On utilise le nombre de 5 pour le mettre en score suivant les règles:
-    # un seul 5 -> +0 pts, plus ou égal a 2 -> +1 pts, zéro 5 -> -1 pts
+    # Un seul 5 -> +0 pts, plus ou égal a 2 -> +1 pts, zéro 5 -> -1 pts
     if nb_de_5 == 0:
         score -= 1
     elif nb_de_5 == 1:
@@ -118,13 +118,13 @@ else :
 #! Récapitulatif mis en forme pour avoir un affichage plus clair et lisible
 # Rappel: ":<37" = aligner à gauche pour un total de 37 caractères
 # "<" gauche, ">" droite, "^" centre
-# doc sur https://docs.python.org/fr/3/library/string.html
+# Doc sur https://docs.python.org/fr/3/library/string.html
 
 
 print("_" * 50) # Underscore
-# à savoir : l'utilisation de guillemets doubles dans un f-string provoque une "SyntaxError" pour une version <= python 3.11
+# À savoir : l'utilisation de guillemets doubles dans un f-string provoque une "SyntaxError" pour une version <= python 3.11
 print(f"| {'Nombre de tours pour Camille :':<37} {compteur_tour_cam:>8} |")
 print(f"| {'Nombre de tours pour Hugo :':<37} {compteur_tour_hug:>8} |")
 print(f"| {'Gagnant :':<37} {gagnant:>8} |")
 print(f"| {'Nombre total de dés lancés :':<37} {(compteur_tour_cam + compteur_tour_hug)*8:>8} |")
-print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
+print("‾" * 50) # "Upperscore", un underscore dans l'autre sens pour fermer le tableau
