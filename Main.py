@@ -24,7 +24,7 @@ def lancers(nombre_de_lancers=8):
     
     for i in range(nombre_de_lancers):
         # Utilisation de random.randint(1, 6) pour avoir un nombre aléatoire entre 1 et 6 et le mettre dans une liste.
-        liste.append(random.randint(1, 6))
+        liste.append(random.randint(1, 6)) # utilisation de .append() mais on peux aussi utiliser "liste +=random.randint(0, 6)"
 
     return liste
 
