@@ -123,7 +123,7 @@ print("_" * 50) # Underscore
 print(f"| {"Nombre de tours pour Camille :":<37} {compteur_tour_cam:>8} |")
 print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
 print(f"| {"Gagnant :":<37} {gagnant:>8} |")
-print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*6:>8} |")
+print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*8:>8} |")
 print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
 
 
