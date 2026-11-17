@@ -6,6 +6,7 @@ Retrouvez ce projet sur github - https://github.com/Rooomaan/Lancers-de-d-s-NSI-
 - Les points d'interrogation (?)
 - Les "Todo"
 sont une mise en forme pour une coloration syntaxique de l'extension "Better Comments" sur VSCode pour une meilleure lecture.
+
 """
 
 
@@ -119,9 +120,11 @@ else :
 # "<" gauche, ">" droite, "^" centre
 # doc sur https://docs.python.org/fr/3/library/string.html
 
+
 print("_" * 50) # Underscore
-print(f"| {"Nombre de tours pour Camille :":<37} {compteur_tour_cam:>8} |")
-print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
-print(f"| {"Gagnant :":<37} {gagnant:>8} |")
-print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*8:>8} |")
+# à savoir : l'utilisation de guillemet double dans un f-string provoque une "SyntaxError" pour une version <= python 3.11
+print(f"| {'Nombre de tours pour Camille :':<37} {compteur_tour_cam:>8} |")
+print(f"| {'Nombre de tours pour Hugo :':<37} {compteur_tour_hug:>8} |")
+print(f"| {'Gagnant :':<37} {gagnant:>8} |")
+print(f"| {'Nombre total de dés lancés :':<37} {(compteur_tour_cam + compteur_tour_hug)*8:>8} |")
 print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
