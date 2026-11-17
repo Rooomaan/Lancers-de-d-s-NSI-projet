@@ -25,7 +25,7 @@ def lancers(nombre_de_lancers=8):
     
     for i in range(nombre_de_lancers):
         # Utilisation de random.randint(1, 6) pour avoir un nombre aléatoire entre 1 et 6 et le mettre dans une liste.
-        liste.append(random.randint(1, 6)) # utilisation de .append() mais on peux aussi utiliser "liste += [random.randint(1, 6)]"
+        liste.append(random.randint(1, 6)) # utilisation de .append() mais on peut aussi utiliser "liste += [random.randint(1, 6)]"
 
     return liste
 
@@ -36,7 +36,7 @@ def tour():
     score = 0
     lancer = lancers()
     nb_de_5 = 0
-    # On parcours la liste pour compter le nombre de 5
+    # On parcourt la liste pour compter le nombre de 5
     for i in lancer:
         if i == 5:
             nb_de_5 += 1
@@ -116,13 +116,13 @@ else :
     gagnant = "Hugo"
 
 #! Récapitulatif mis en forme pour avoir un affichage plus clair et lisible
-# Rapel: ":<37" = aligner à gauche pour un total de 37 caractères
+# Rappel: ":<37" = aligner à gauche pour un total de 37 caractères
 # "<" gauche, ">" droite, "^" centre
 # doc sur https://docs.python.org/fr/3/library/string.html
 
 
 print("_" * 50) # Underscore
-# à savoir : l'utilisation de guillemet double dans un f-string provoque une "SyntaxError" pour une version <= python 3.11
+# à savoir : l'utilisation de guillemets doubles dans un f-string provoque une "SyntaxError" pour une version <= python 3.11
 print(f"| {'Nombre de tours pour Camille :':<37} {compteur_tour_cam:>8} |")
 print(f"| {'Nombre de tours pour Hugo :':<37} {compteur_tour_hug:>8} |")
 print(f"| {'Gagnant :':<37} {gagnant:>8} |")
