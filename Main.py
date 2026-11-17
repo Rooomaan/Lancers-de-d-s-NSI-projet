@@ -24,7 +24,7 @@ def lancers(nombre_de_lancers=8):
     
     for i in range(nombre_de_lancers):
         # Utilisation de random.randint(1, 6) pour avoir un nombre aléatoire entre 1 et 6 et le mettre dans une liste.
-        liste.append(random.randint(1, 6)) # utilisation de .append() mais on peux aussi utiliser "liste +=random.randint(1, 6)"
+        liste.append(random.randint(1, 6)) # utilisation de .append() mais on peux aussi utiliser "liste += [random.randint(1, 6)]"
 
     return liste
 
@@ -125,5 +125,3 @@ print(f"| {"Nombre de tours pour Hugo :":<37} {compteur_tour_hug:>8} |")
 print(f"| {"Gagnant :":<37} {gagnant:>8} |")
 print(f"| {"Nombre total de dés lancés :":<37} {(compteur_tour_cam + compteur_tour_hug)*8:>8} |")
 print("‾" * 50) # "Upperscore", un underscore dans l'autre sens
-
-
